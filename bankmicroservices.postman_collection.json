@@ -1,0 +1,234 @@
+{
+  "info": {
+    "_postman_id": "c2e21b56-42a6-45b3-8cab-a5dc966d1b93",
+    "name": "bankmicroservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29845932",
+    "_collection_link": "https://go.postman.co/collection/29845932-c2e21b56-42a6-45b3-8cab-a5dc966d1b93?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "createCustomer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jose Lema\",\n  \"gender\": \"M\",\n  \"age\": 35,\n  \"identification\": \"1234567890\",\n  \"address\": \"Otavalo\",\n  \"phone\": \"098254785\",\n  \"password\": \"1234\",\n  \"active\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/customers",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "60"
+          ],
+          "port": "8081",
+          "path": [
+            "customers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listCustomers",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "getCustomer",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "create account",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"customerId\":1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/accounts",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "60"
+          ],
+          "port": "8082",
+          "path": [
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deposit",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"amount\":12\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/accounts/ACC-1768768569575/deposit",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "60"
+          ],
+          "port": "8082",
+          "path": [
+            "accounts",
+            "ACC-1768768569575",
+            "deposit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reportes",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/reportes?clienteId=1&from=2026-01-01&to=2026-01-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "reportes"
+          ],
+          "query": [
+            {
+              "key": "clienteId",
+              "value": "1"
+            },
+            {
+              "key": "from",
+              "value": "2026-01-01"
+            },
+            {
+              "key": "to",
+              "value": "2026-01-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAccount",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/accounts/ACC-1768768569575",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "60"
+          ],
+          "port": "8082",
+          "path": [
+            "accounts",
+            "ACC-1768768569575"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "retiro",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"amount\":24.87\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/accounts/ACC-1768768569575/withdraw",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "18",
+            "60"
+          ],
+          "port": "8082",
+          "path": [
+            "accounts",
+            "ACC-1768768569575",
+            "withdraw"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
