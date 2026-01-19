@@ -37,9 +37,9 @@ Each microservice:
 
 ---
 
-## 🚀 Services
+##  Services
 
-### 🧑 Customer Service
+###  Customer Service
 
 Responsible for customer management.
 
@@ -51,7 +51,7 @@ GET /customers #get all customers
 GET /customers/{costumerID} #get a customer by id
 
 
-### 🧑 Account Service
+###  Account Service
 
 Responsible for account and reports management.
 
@@ -64,3 +64,13 @@ GET /accounts/{numberAccount} # get accoutn by number account
 POST /accounts/{numberAccount}/deposit 
 POST /accounts/{numberAccount}/withdraw
 GET /reportes?clienteId={customerId}&from={dateStart}&to={dateEnd}
+
+
+| Status | Description           |
+| ------ | --------------------- |
+| 200    | OK                    |
+| 201    | Created               |
+| 204    | No Content            |
+| 400    | Validation error      |
+| 404    | Resource not found    |
+| 500    | Internal server error |
