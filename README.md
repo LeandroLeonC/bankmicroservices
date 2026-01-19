@@ -46,3 +46,21 @@ Responsible for customer management.
 **Port**
 ```http
 8081
+POST /customers #create customer
+GET /customers #get all customers
+GET /customers/{costumerID} #get a customer by id
+
+
+### 🧑 Account Service
+
+Responsible for account and reports management.
+
+**Port**
+```http
+8082
+
+POST /accounts #create account
+GET /accounts/{numberAccount} # get accoutn by number account
+POST /accounts/{numberAccount}/deposit 
+POST /accounts/{numberAccount}/withdraw
+GET /reportes?clienteId={customerId}&from={dateStart}&to={dateEnd}
